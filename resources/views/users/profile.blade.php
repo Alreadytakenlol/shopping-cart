@@ -11,8 +11,9 @@
                <ul class="list-group-item">
                    @foreach($order['cart']['items'] as $item)
                         <li class="list-group-item">
-                            <span class="badge">{{$item['price']}} </span>
-                            {{$item['item']['title']}} | {{$item['qty']}} 
+                            <span class="badge">$ {{$item['price']}} </span>
+                            <span> {{$item['item']['title']}}</span> 
+                            <span class="pull-right">Amount {{$item['qty']}}</span> 
                         </li>
                    @endforeach
                </ul>
