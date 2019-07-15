@@ -1,0 +1,17 @@
+.price {
+    font-weight: bold;
+    font-size: 24px !important;
+    
+}
+
+.figure figcaption{
+    /*margin-top:5px;*/
+    padding-left:15px;
+    font-size:16px;
+}
+
+.figure img{
+    margin-top: 20px;
+    margin-left: 10px;
+    max-width: 300px;
+}
