@@ -17,7 +17,7 @@ Laravel Shop
   @foreach($products as $k=>$v)
 
 <figure class="figure">
-  <img src="{{$v->imagePath}}" class="figure-img img-fluid rounded" alt="...">
+  <a href="{{route('product.product',['id'=>$v->id])}}"><img src="{{$v->imagePath}}" class="figure-img img-fluid rounded" alt="..."></a>
   <figcaption class="figure-caption text-left">{{$v->title}}</figcaption>
   <figcaption class="figure-caption text-left price">${{$v->price}}</figcaption>
   <figcaption class="figure-caption text-left"><a href="{{route('product.addToCart',['id'=>$v->id])}}" class="btn btn-success pull-right" role="button">Add to Cart</a></figcaption>

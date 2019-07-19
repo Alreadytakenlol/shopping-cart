@@ -61,7 +61,10 @@ Route::get('/checkout', [
     'middleware'=> 'auth'
 ]);
 
-
+Route::get('/product/{id}', [
+    'uses'=>'ProductController@getProduct',
+    'as'=> 'product.product'   
+]);
 
 Route::group(['prefix'=>'user'],function(){
 
@@ -105,3 +108,8 @@ Route::group(['prefix'=>'user'],function(){
 
 });
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

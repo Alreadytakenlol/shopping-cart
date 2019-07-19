@@ -68,6 +68,12 @@ class ProductController extends Controller
         return view('shop.shopping-cart',['products'=>$cart->items,'totalPrice'=>$cart->totalPrice]);
     }
 
+    public function getProduct($id){
+        $product = Product::find($id);
+
+        return view('shop.product',['product'=>$product]);
+    }
+
     public function getChooseMethod(){
         if(!Session::has('cart')){
             return view('shop.shopping-cart');
