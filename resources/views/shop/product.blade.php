@@ -12,8 +12,14 @@
     </div>
     <div class="row">
         <div class="col-sm-8 col-md-8">
-            
-            <img src="{{$product->imagePath}}" class="img-fluid rounded" alt="...">
+        @php
+            if(strpos($product->imagePath, 'http') === false){
+                $imagePath = voyager::image($product->imagePath);
+            }else{
+                $imagePath = $product->imagePath;
+            }
+        @endphp
+            <img src="{{$imagePath}}" class="img-fluid rounded" alt="...">
             <br/><br/>
             <h5>{!!$product->description!!}</h5>
         </div>
@@ -29,7 +35,7 @@
         </div>
     </div>
     <br/>
-            <p>Picture Source: </p><a href="{{$product->imagePath}}"><p>{{$product->imagePath}}</p></a>
+            <p>Picture Source: </p><a href="{{$imagePath}}"><p>{{$imagePath}}</p></a>
        
     
 @endsection
