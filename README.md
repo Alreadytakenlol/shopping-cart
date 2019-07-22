@@ -1,5 +1,7 @@
 # shopping-cart
-This is a shopping-cart practice base on laravel58 with boorstap and stripe payment
+This is a simple shopping-cart practice base on laravel58
+
+and boorstap with voyager backend and stripe payment
 
 And the photos in website were found by google,i dont have any copyright
 
@@ -8,14 +10,17 @@ Only stripe payment is functional,others are demo
 You can test payment by card-number 4242-4242-4242-4242
 
 
+1.Clone and download the project
 
-1.Build a database named laravelshop
+2.Build a database 
 
-2.php artisan migrate
+3.check the env. 
 
-3.php artisan db:seed
+3.php artisan migrate
 
-That's all
+4.php artisan db:seed
+
+
 
 
 
