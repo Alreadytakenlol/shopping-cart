@@ -16,9 +16,9 @@ You can test payment by card-number 4242-4242-4242-4242
 
 3.check the env. 
 
-3.php artisan migrate
+4.php artisan migrate
 
-4.php artisan db:seed
+5.php artisan db:seed
 
 
 
